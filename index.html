@@ -38,6 +38,10 @@
       color: aquamarine;
     }
 
+    aside {
+      display: inline-block;
+    }
+
     section {
       margin: 0 5%;
     }
@@ -86,7 +90,18 @@
 
 <div v-cloak id="main">
 
+<aside>
+  <input id="searches" type="text" placeholder="Search" @keyup.enter="search()">
+  <div>
+      <p>Search results:</p>
+  </div>
+</aside>
 
+<pfe-collapsable label="Macros">
+  <div class="macro-grid">
+    <p v-for="item of macros" class="grid-item">{{ item }}</p>
+  </div>
+</pfe-collapsable>
 
 <pfe-function
   v-for="func_key, index of function_keys"

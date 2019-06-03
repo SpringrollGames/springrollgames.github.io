@@ -66,8 +66,22 @@ var main = new Vue({
   el: '#main',
   data: {
     macros: macros,
-    macro_keys: Object.keys(macros),
     functions: functions,
     function_keys: Object.keys(functions)
+  },
+  beforeMount() {
+    let macro_list = [];
+    for (let i = 0; i < macros.length; i += 3) {
+      macro_list.push(macros[i])
+    }
+    this.search_list = this.function_keys.concat(macro_list);
+    console.log(this.search_list);
+  },
+  methods: {
+    search() {
+      term = new RegExp(document.getElementById('searches').value);
+      results = this.search_list.filter(func => term.exec(func) !== null);
+      console.log(results);
+    }
   }
 })
