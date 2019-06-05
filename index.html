@@ -10,6 +10,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background-color: #2d2d2d;
       color: #cfcfcf;
+      padding: 0 2% 2em 2%;
     }
 
     .sub-section {
@@ -23,64 +24,89 @@
     }
 
     a {
-      text-decoration: none; /* used to get rid of automatic link underlines */
-    }
-    a:link {
-      color: #00ff00;
-    }
-    a:visited {
-      color: #00aa00;
+      text-decoration: none;
+      color: #33bb77;
     }
     a:hover {
-      color: white;
+      color: #aaffaa;
     }
     a:active {
-      color: aquamarine;
-    }
-
-    aside {
-      display: inline-block;
+      color: #ffffff;
     }
 
     section {
       margin: 0 5%;
     }
 
+    mark {
+      font-family: monospace;
+      background-color: #222222;
+      border-radius: .5em;
+      padding: .2em;
+      color: #cfcfcf;
+    }
+
     code {
       background-color: #222222;
       display: block;
-      border-radius: 1em;
+      border-radius: .5em;
       padding: 1em;
-      white-space: pre;
+      white-space: pre-wrap;
     }
 
     [v-cloak], .hidden {
       display: none;
     }
 
-    .argument-grid {
+    .grid {
       display: grid;
-      grid-template-columns: min-content auto;
       margin: 0 5%;
+      border-radius: .5em;
+      overflow: hidden;
     }
+
     .grid-item {
       background-color: #4f4f4f;
       padding: .5em;
       margin: 0;
       border: 1px solid #2f2f2f;
     }
+
+    .macro.grid {
+      grid-template-columns: min-content min-content auto;
+    }
+
+    .argument.grid {
+      grid-template-columns: min-content auto;
+    }
+
     .argument.grid-item:nth-child(2n-1) {
       padding-right: 5em;
     }
 
-    .macro-grid {
-      display: grid;
-      grid-template-columns: min-content min-content auto;
-      margin: 0 5%;
+    .search-results {
+      position: fixed;
+      left: 50%;
+      width: 70vw;
+      max-height: 70vh;
+      margin-left: -38vw;
+      background-color: rgba(0,0,0,.6);
+      padding: 3vw;
+      overflow: scroll;
+    }
+
+    .search-results p {
+      margin-top: 0;
+    }
+
+    .logo {
+      display: inline-block;
     }
 
     @media screen and (max-width: 800px) {
-      /* might not need it lol. */
+      .argument.grid-item:nth-child(2n-1) {
+        padding-right: .5em;
+      }
     }
   </style>
   <title>Platform Fighter Engine</title>
@@ -88,32 +114,62 @@
 
 <body>
 
-<div v-cloak id="main">
+<div v-cloak id="app">
 
-<aside>
-  <input id="searches" type="text" placeholder="Search" @keyup.enter="search()">
-  <div>
-      <p>Search results:</p>
+<header>
+  <h3 class="logo">Platform Fighter Engine Documentation</h3>
+  <input
+    id="searches"
+    type="text"
+    placeholder="Search"
+    @keyup.enter="search()"
+    @keyup.backspace="clear()">
+  <nav>
+    <a href="#macros">Macros</a>
+    <a href="#functions">Functions</a>
+  </nav>
+</header>
+
+<div v-show="results.length > 0" class="search-results">
+    <p>Search results:</p>
+    <ul>
+      <li v-for="result of results">
+        <button @click="end_search(result)">{{ result }}</button>
+      </li>
+    </ul>
+</div>
+
+<main>
+
+<div v-if="page=='macros'">
+  <h2>Macros</h2>
+  <div class="macro grid">
+    <p>NAME</p>
+    <p>TYPE (DEFAULT)</p>
+    <p>DESCRIPTION</p>
+    <p v-for="item of macros" :id="item" class="grid-item">{{ item }}</p>
   </div>
-</aside>
+</div>
 
-<pfe-collapsable label="Macros">
-  <div class="macro-grid">
-    <p v-for="item of macros" class="grid-item">{{ item }}</p>
+<div v-if="page=='functions'">
+  <h2>Functions</h2>
+  <div v-for="func of function_keys">
+    <a :href="'#'+func">{{ func }}</a>
   </div>
-</pfe-collapsable>
+</div>
 
-<pfe-function
-  v-for="func_key, index of function_keys"
-  :name="func_key"
-  :func="functions[func_key]"
-  :key="func_key"
-  :id="func_key">
-</pfe-function>
+<div v-if="page_is_function">
+  <pfe-function
+    :name="page"
+    :func="functions[page]">
+  </pfe-function>
+</div>
+
+</main>
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="vue.js"></script>
 <script src="macros.js"></script>
 <script src="functions.js"></script>
 <script src="main.js"></script>
