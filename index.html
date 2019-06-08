@@ -34,6 +34,22 @@
       color: #ffffff;
     }
 
+    ul {
+      list-style: square;
+      color: #33bb77;
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: #33bb77;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      color: #aaffaa;
+    }
+
     section {
       margin: 0 5%;
     }
@@ -74,6 +90,10 @@
 
     .macro.grid {
       grid-template-columns: min-content min-content auto;
+    }
+
+    .macro.grid-item.highlighted {
+      border: 1px solid #ffffff;
     }
 
     .argument.grid {
@@ -147,7 +167,13 @@
     <p>NAME</p>
     <p>TYPE (DEFAULT)</p>
     <p>DESCRIPTION</p>
-    <p v-for="item of macros" :id="item" class="grid-item">{{ item }}</p>
+    <p
+      v-for="item of macros"
+      :id="item"
+      class="macro grid-item"
+      :class="{ highlighted: highlighted==item }">
+      {{ item }}
+    </p>
   </div>
 </div>
 

@@ -76,7 +76,8 @@ var app = new Vue({
     functions: functions,
     function_keys: Object.keys(functions).sort(),
     results: [],
-    page: null
+    page: null,
+    highlighted: null
   },
   beforeMount() {
     // create list of possible search items
@@ -108,6 +109,7 @@ var app = new Vue({
       page = window.location.hash.slice(1);
       // macros are searchable, but all on one page
       if (this.macro_list.indexOf(page) != -1) {
+        this.highlighted = page;
         this.page = 'macros';
       } else {
         this.page = page;
