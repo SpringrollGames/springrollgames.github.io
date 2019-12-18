@@ -6,7 +6,6 @@ create_melee: {
 	description:
 		`<p>This function creates a new instance of <a href="#obj_melee">obj_melee</a> and initializes it with the arguments you provided.</p>
 		<p>A melee hitbox is an attached hitbox that is tied to the owner's hitbox groups. It is the basis for most attacks.</p>`,
-	syntax: 'create_melee(rel_x, rel_y, xscale, yscale, damage, knockback, scaling, hitlag, angle, lifetime, shape, group, [flipper]);',
 	args: [
 		'rel_x', 'The x offset that the hitbox will be created at. It is automatically flipped based on the direction the player is facing.',
 		'rel_y', 'The y offset that the hitbox will be created at',
@@ -34,7 +33,6 @@ create_melee: {
 set_speed: {
 	description:
 		`<p>This function can be used to control the speed of a player instance. You can choose to change the speed relative to the current speed or to an absolute amount.</p>`,
-	syntax: 'set_speed(hsp, vsp, [hsp_relative], [vsp_relative]);',
 	args: [
 		'hsp', 'The change in horizontal speed',
 		'vsp', 'The change in vertical speed', 
@@ -59,7 +57,6 @@ set_speed(0, -10, false, true);`,
 change_facing: {
 	description:
 		`<p>Changes the direction the player is facing based on the control stick.</p>`,
-	syntax: 'change_facing([control_stick]);',
 	args: [
 		'[control_stick]', 'Optional. You can set it to check the Rstick instead of the Lstick, which is the default',
 	],
@@ -77,7 +74,6 @@ change_facing: {
 stick_direction: {
 	description:
 		`<p>Checks if the specified control stick is tilted in the given direction.</p>`,
-	syntax: 'stick_direction(control_stick, direction);',
 	args: [
 		'control_stick', 'Either Lstick or Rstick',
 		'direction', 'The direction that will be checked. Must be from the DIR enum',
@@ -101,7 +97,6 @@ attack_start: {
 			<li>The player's state is set to the attacking state</li>
 			<li>The script is run with the special phase <mark>PHASE.start</mark></li>
 		</ul>`,
-	syntax: 'attack_start(script)',
 	args: [
 		'script', 'The script that will be run as an attack. (Note: Do not put () after the script as that will run the script instead of passing it into the function)'
 	],
@@ -117,9 +112,9 @@ attack_start: {
 	}
 },
 
+
 save_string_file: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'filename', '',
     'string', '',
@@ -133,7 +128,6 @@ save_string_file: {
 
 on_plat: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[x]', '',
     '[y]', '',
@@ -147,7 +141,6 @@ on_plat: {
 
 Standard_Run_Stop: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -160,7 +153,6 @@ Standard_Run_Stop: {
 
 Standard_Magnetized: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -173,7 +165,6 @@ Standard_Magnetized: {
 
 hitbox_has_hit: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
   ],
@@ -186,7 +177,6 @@ hitbox_has_hit: {
 
 fspec_missile: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -199,7 +189,6 @@ fspec_missile: {
 
 Standard_Teching: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -212,7 +201,6 @@ Standard_Teching: {
 
 calculate_hitstun: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'base_knockback', '',
     'weight', '',
@@ -229,7 +217,6 @@ calculate_hitstun: {
 
 uair_ivysaur: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -242,7 +229,6 @@ uair_ivysaur: {
 
 dspec_counter: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -255,7 +241,6 @@ dspec_counter: {
 
 Standard_Run_Turnaround: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -268,7 +253,6 @@ Standard_Run_Turnaround: {
 
 fspec_falcon: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -281,7 +265,6 @@ fspec_falcon: {
 
 check_ledge_tether: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'distance', '',
   ],
@@ -294,20 +277,6 @@ check_ledge_tether: {
 
 only_one: {
   description: `<p></p>`,
-  syntax: '',
-  args: [
-    
-  ],
-  returns: '---',
-  example: {
-    code: ``,
-    description: `<p></p>`
-  }
-},
-
-move_: {
-  description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -320,7 +289,6 @@ move_: {
 
 Replay_Buffer_Add_Chunk: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'src_buffer', '',
     'dest_buffer', '',
@@ -334,7 +302,6 @@ Replay_Buffer_Add_Chunk: {
 
 aerial_drift: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -347,7 +314,6 @@ aerial_drift: {
 
 dspec0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -360,7 +326,6 @@ dspec0: {
 
 Standard_Ledge_Attack: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -373,7 +338,6 @@ Standard_Ledge_Attack: {
 
 fx_create: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'sprite', '',
     'image_speed', '',
@@ -394,7 +358,6 @@ fx_create: {
 
 fastfall: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -407,7 +370,6 @@ fastfall: {
 
 check_jump: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -420,7 +382,6 @@ check_jump: {
 
 Standard_Jumpsquat: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -433,7 +394,6 @@ Standard_Jumpsquat: {
 
 fspec_drill: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -446,7 +406,6 @@ fspec_drill: {
 
 Character_Data_Create: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'name', '',
     'script', '',
@@ -466,7 +425,6 @@ Character_Data_Create: {
 
 set_hitbox_property: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'hitbox', '',
     'property', '',
@@ -482,7 +440,6 @@ set_hitbox_property: {
 
 attack_stop: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[state]', '',
   ],
@@ -495,7 +452,6 @@ attack_stop: {
 
 move_attached_hitbox: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'hitbox_id', '',
     'relative_x', '',
@@ -510,7 +466,6 @@ move_attached_hitbox: {
 
 Stick_Cache_Values: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stick', '',
     'axish', '',
@@ -526,7 +481,6 @@ Stick_Cache_Values: {
 
 utilt_firebreath: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -539,7 +493,6 @@ utilt_firebreath: {
 
 dash_grab0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -552,7 +505,6 @@ dash_grab0: {
 
 to_string: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'values...', '',
   ],
@@ -565,7 +517,6 @@ to_string: {
 
 Standard_Lost: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -578,7 +529,6 @@ Standard_Lost: {
 
 nspec_roy: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -591,7 +541,6 @@ nspec_roy: {
 
 nspec_shot_put: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -604,7 +553,6 @@ nspec_shot_put: {
 
 palette_shader_set: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[palette_sprite]', '',
     '[color]', '',
@@ -618,7 +566,6 @@ palette_shader_set: {
 
 fastfall_attack_try: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -631,7 +578,6 @@ fastfall_attack_try: {
 
 palette_colors_get_from_sprite: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'sprite', '',
     '[column]', '',
@@ -645,7 +591,6 @@ palette_colors_get_from_sprite: {
 
 Replay_Load: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'filename', '',
   ],
@@ -658,7 +603,6 @@ Replay_Load: {
 
 Standard_Aerial: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -671,7 +615,6 @@ Standard_Aerial: {
 
 ftilt0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -684,7 +627,6 @@ ftilt0: {
 
 Profile_Save_All: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -697,7 +639,6 @@ Profile_Save_All: {
 
 uthrow0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -710,7 +651,6 @@ uthrow0: {
 
 Standard_Idle: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -723,7 +663,6 @@ Standard_Idle: {
 
 parry_trigger: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'attacker', '',
     'target', '',
@@ -737,7 +676,6 @@ parry_trigger: {
 
 Standard_Attacking: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -750,7 +688,6 @@ Standard_Attacking: {
 
 fair_slash: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -763,7 +700,6 @@ fair_slash: {
 
 dec_to_hex: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'number', '',
   ],
@@ -776,7 +712,6 @@ dec_to_hex: {
 
 uair_mario: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -789,7 +724,6 @@ uair_mario: {
 
 bair_k_rool: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -802,7 +736,6 @@ bair_k_rool: {
 
 Part_System_Init: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -815,7 +748,6 @@ Part_System_Init: {
 
 b_reverse: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -828,7 +760,6 @@ b_reverse: {
 
 ftilt_angled: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -841,7 +772,6 @@ ftilt_angled: {
 
 uair_bowser_jr: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -854,7 +784,6 @@ uair_bowser_jr: {
 
 Standard_Extra: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -867,7 +796,6 @@ Standard_Extra: {
 
 apply_knockback: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'angle', '',
     'speed', '',
@@ -882,7 +810,6 @@ apply_knockback: {
 
 Standard_Is_Grabbed: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -895,7 +822,6 @@ Standard_Is_Grabbed: {
 
 uspec_bowser: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -908,7 +834,6 @@ uspec_bowser: {
 
 uspec_teleport: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -921,7 +846,6 @@ uspec_teleport: {
 
 dashattack0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -934,7 +858,6 @@ dashattack0: {
 
 match_begin: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stage', '',
     'stock', '',
@@ -952,7 +875,6 @@ match_begin: {
 
 uair_joker: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -965,7 +887,6 @@ uair_joker: {
 
 create_targetbox: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'relative_x', '',
     'relative_y', '',
@@ -991,7 +912,6 @@ create_targetbox: {
 
 create_windbox: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'relative_x', '',
     'relative_y', '',
@@ -1015,7 +935,6 @@ create_windbox: {
 
 create_palette_rgba: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'color_rgba...', '',
   ],
@@ -1028,7 +947,6 @@ create_palette_rgba: {
 
 controller_any_input: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'device_number', '',
     '[stick_tilt_amount]', '',
@@ -1042,7 +960,6 @@ controller_any_input: {
 
 calculate_smash_damage: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'base_damage', '',
     '[charge]', '',
@@ -1058,7 +975,6 @@ calculate_smash_damage: {
 
 Player_Init_Start: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1071,7 +987,6 @@ Player_Init_Start: {
 
 uspec_Fox: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1084,7 +999,6 @@ uspec_Fox: {
 
 check_ledge_grab_falling: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1097,7 +1011,6 @@ check_ledge_grab_falling: {
 
 ripple_system_destroy: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1110,7 +1023,6 @@ ripple_system_destroy: {
 
 fair_mii_gunner: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1123,7 +1035,6 @@ fair_mii_gunner: {
 
 Standard_Dashing: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1136,7 +1047,6 @@ Standard_Dashing: {
 
 check_spot_dodge: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1149,7 +1059,6 @@ check_spot_dodge: {
 
 calculate_damage_color: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'damage', '',
   ],
@@ -1162,7 +1071,6 @@ calculate_damage_color: {
 
 die: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1175,7 +1083,6 @@ die: {
 
 apply_angle_flipper: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'base_angle', '',
     'flipper', '',
@@ -1192,7 +1099,6 @@ apply_angle_flipper: {
 
 Input_Replay_Convert: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'replay_buffer', '',
     'input_buffer', '',
@@ -1206,7 +1112,6 @@ Input_Replay_Convert: {
 
 set_speed_towards_point_accel: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'px', '',
     'py', '',
@@ -1222,7 +1127,6 @@ set_speed_towards_point_accel: {
 
 player_shader_set: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1235,7 +1139,6 @@ player_shader_set: {
 
 palette_get_color: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'palette', '',
     'index', '',
@@ -1250,7 +1153,6 @@ palette_get_color: {
 
 aerial_drift_momentum: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1263,7 +1165,6 @@ aerial_drift_momentum: {
 
 set_projectile_overlay_sprite: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     ' projectile', '',
     'sprite', '',
@@ -1284,7 +1185,6 @@ set_projectile_overlay_sprite: {
 
 move_y_bounce: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1297,7 +1197,6 @@ move_y_bounce: {
 
 Profile_Destroy: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'num', '',
   ],
@@ -1310,7 +1209,6 @@ Profile_Destroy: {
 
 dspec_rest: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1323,7 +1221,6 @@ dspec_rest: {
 
 character_data: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1336,7 +1233,6 @@ character_data: {
 
 friction_gravity: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[friction]', '',
     '[gravity]', '',
@@ -1351,7 +1247,6 @@ friction_gravity: {
 
 dair0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1364,7 +1259,6 @@ dair0: {
 
 custom1: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1377,7 +1271,6 @@ custom1: {
 
 reset_hitbox_group: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'group_number', '',
     '[collided_list]', '',
@@ -1391,7 +1284,6 @@ reset_hitbox_group: {
 
 calculate_knockback: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'target_hp', '',
     'damage', '',
@@ -1408,7 +1300,6 @@ calculate_knockback: {
 
 Speed_Fraction: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1421,7 +1312,6 @@ Speed_Fraction: {
 
 check_upward_grounds: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1434,7 +1324,6 @@ check_upward_grounds: {
 
 hit_fx_style_create: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'fx_style', '',
     'angle', '',
@@ -1451,7 +1340,6 @@ hit_fx_style_create: {
 
 Standard_Parrying: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1464,7 +1352,6 @@ Standard_Parrying: {
 
 buffer_reset: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'buffer', '',
   ],
@@ -1477,7 +1364,6 @@ buffer_reset: {
 
 nair_ike: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1490,7 +1376,6 @@ nair_ike: {
 
 Standard_Screen_KO: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1503,7 +1388,6 @@ Standard_Screen_KO: {
 
 nspec0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1516,7 +1400,6 @@ nspec0: {
 
 Replay_Save: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'filename', '',
   ],
@@ -1529,7 +1412,6 @@ Replay_Save: {
 
 custom0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1542,7 +1424,6 @@ custom0: {
 
 check_drop_through: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1555,20 +1436,6 @@ check_drop_through: {
 
 Standard_Ledge_Hang: {
   description: `<p></p>`,
-  syntax: '',
-  args: [
-    
-  ],
-  returns: '---',
-  example: {
-    code: ``,
-    description: `<p></p>`
-  }
-},
-
-move_bounce_: {
-  description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1581,7 +1448,6 @@ move_bounce_: {
 
 fair_shulk: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1594,7 +1460,6 @@ fair_shulk: {
 
 ds_list_deepcopy: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1607,7 +1472,6 @@ ds_list_deepcopy: {
 
 bthrow_drag: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1620,7 +1484,6 @@ bthrow_drag: {
 
 check_pummel: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1633,7 +1496,6 @@ check_pummel: {
 
 hit_sfx_play: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'sounds', '',
     '[pitch_shift]', '',
@@ -1647,7 +1509,6 @@ hit_sfx_play: {
 
 Standard_Custom: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1660,7 +1521,6 @@ Standard_Custom: {
 
 check_landing: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1673,7 +1533,6 @@ check_landing: {
 
 fair0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1686,7 +1545,6 @@ fair0: {
 
 Detectbox_Collide: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
   ],
@@ -1699,7 +1557,6 @@ Detectbox_Collide: {
 
 fspec_core_enforcer: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1712,7 +1569,6 @@ fspec_core_enforcer: {
 
 grab_release_held: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1725,7 +1581,6 @@ grab_release_held: {
 
 CSS_Next_Color: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'character', '',
     'current', '',
@@ -1741,7 +1596,6 @@ CSS_Next_Color: {
 
 Profile_Get: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'profile_num', '',
     'setting', '',
@@ -1755,7 +1609,6 @@ Profile_Get: {
 
 nspec_charge_shot_draw: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1768,7 +1621,6 @@ nspec_charge_shot_draw: {
 
 bitflag_read: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'number', '',
     'pos', '',
@@ -1782,7 +1634,6 @@ bitflag_read: {
 
 Standard_Hitstun: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1795,7 +1646,6 @@ Standard_Hitstun: {
 
 ripple_effect_create: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1808,7 +1658,6 @@ ripple_effect_create: {
 
 calculate_shieldstun: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'damage', '',
     'multiplier', '',
@@ -1822,7 +1671,6 @@ calculate_shieldstun: {
 
 Standard_Knocked_Out: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1835,7 +1683,6 @@ Standard_Knocked_Out: {
 
 check_run_stop: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1848,7 +1695,6 @@ check_run_stop: {
 
 player_set_renderer: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'object', '',
   ],
@@ -1861,7 +1707,6 @@ player_set_renderer: {
 
 di_direction: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'initial_direction', '',
     'stick_x', '',
@@ -1877,7 +1722,6 @@ di_direction: {
 
 ripple_system_draw: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1890,7 +1734,6 @@ ripple_system_draw: {
 
 fspec_wind: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1903,7 +1746,6 @@ fspec_wind: {
 
 create_projectile: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'relative_x', '',
     'relative_y', '',
@@ -1928,7 +1770,6 @@ create_projectile: {
 
 approach: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'current', '',
     'target', '',
@@ -1943,7 +1784,6 @@ approach: {
 
 check_rolling: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1956,7 +1796,6 @@ check_rolling: {
 
 Standard_Techrolling: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -1969,7 +1808,6 @@ Standard_Techrolling: {
 
 bitflag_write: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'number', '',
     'pos', '',
@@ -1981,22 +1819,8 @@ bitflag_write: {
   }
 },
 
-move_hit_platforms_: {
-  description: `<p></p>`,
-  syntax: '',
-  args: [
-    
-  ],
-  returns: '---',
-  example: {
-    code: ``,
-    description: `<p></p>`
-  }
-},
-
 Standard_Flinch: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2009,7 +1833,6 @@ Standard_Flinch: {
 
 usmash0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2022,7 +1845,6 @@ usmash0: {
 
 draw_character_button: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'x', '',
     'y', '',
@@ -2041,7 +1863,6 @@ draw_character_button: {
 
 uair0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2054,7 +1875,6 @@ uair0: {
 
 check_grab: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2067,7 +1887,6 @@ check_grab: {
 
 all_connected_controllers: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2080,7 +1899,6 @@ all_connected_controllers: {
 
 bair0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2093,7 +1911,6 @@ bair0: {
 
 Player_Draw_Self: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[x]', '',
     '[y]', '',
@@ -2108,7 +1925,6 @@ Player_Draw_Self: {
 
 Standard_Ledge_Trump: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2121,7 +1937,6 @@ Standard_Ledge_Trump: {
 
 move_x: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2134,7 +1949,6 @@ move_x: {
 
 Standard_Knockdown: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2147,7 +1961,6 @@ Standard_Knockdown: {
 
 Standard_Spot_Dodge: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2160,7 +1973,6 @@ Standard_Spot_Dodge: {
 
 is_finishing_blow: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'full_knockback', '',
     'target_x', '',
@@ -2178,7 +1990,6 @@ is_finishing_blow: {
 
 roll_move: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'edge_buffer', '',
     'speed', '',
@@ -2193,7 +2004,6 @@ roll_move: {
 
 fair_mario: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2206,7 +2016,6 @@ fair_mario: {
 
 create_detectbox: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'relative_x', '',
     'relative_y', '',
@@ -2225,7 +2034,6 @@ create_detectbox: {
 
 Standard_Tumble: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2238,7 +2046,6 @@ Standard_Tumble: {
 
 hex_to_dec: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'string', '',
   ],
@@ -2251,7 +2058,6 @@ hex_to_dec: {
 
 Standard_Ledge_Tether: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2264,7 +2070,6 @@ Standard_Ledge_Tether: {
 
 check_grounds: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2277,7 +2082,6 @@ check_grounds: {
 
 check_specials: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2290,7 +2094,6 @@ check_specials: {
 
 attack_has_hit: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2303,7 +2106,6 @@ attack_has_hit: {
 
 Projectile_Collide: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
   ],
@@ -2316,7 +2118,6 @@ Projectile_Collide: {
 
 ripple_effect_destroy: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2329,7 +2130,6 @@ ripple_effect_destroy: {
 
 Standard_Lag: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2342,7 +2142,6 @@ Standard_Lag: {
 
 Standard_Respawning: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2355,7 +2154,6 @@ Standard_Respawning: {
 
 Replay_Buffer_Load_Chunk: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'src_buffer', '',
     'dest_buffer', '',
@@ -2369,7 +2167,6 @@ Replay_Buffer_Load_Chunk: {
 
 Standard_Tech_Wall_Jump: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2382,7 +2179,6 @@ Standard_Tech_Wall_Jump: {
 
 dtilt_belmont: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2395,7 +2191,6 @@ dtilt_belmont: {
 
 stick_get_distance: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stick', '',
     '[frame]', '',
@@ -2409,7 +2204,6 @@ stick_get_distance: {
 
 attack_set_cooldown: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'cooldown', '',
     '[attack_script]', '',
@@ -2423,7 +2217,6 @@ attack_set_cooldown: {
 
 background_clear_activate: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'length', '',
     'color', '',
@@ -2437,7 +2230,6 @@ background_clear_activate: {
 
 ledgeattack0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2450,7 +2242,6 @@ ledgeattack0: {
 
 Choose_Stick_By_Input: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[possible_inputs]', '',
   ],
@@ -2463,7 +2254,6 @@ Choose_Stick_By_Input: {
 
 check_aerials: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2476,7 +2266,6 @@ check_aerials: {
 
 set_invulnerable: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'type', '',
     'time', '',
@@ -2490,7 +2279,6 @@ set_invulnerable: {
 
 cancel_ground_check: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2503,7 +2291,6 @@ cancel_ground_check: {
 
 create_grab: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'relative_x', '',
     'relative_y', '',
@@ -2523,7 +2310,6 @@ create_grab: {
 
 save_string_file_compressed: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'filename', '',
     'string', '',
@@ -2537,7 +2323,6 @@ save_string_file_compressed: {
 
 set_speed_towards_point: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'px', '',
     'py', '',
@@ -2552,7 +2337,6 @@ set_speed_towards_point: {
 
 dspec_falling_attack: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2565,7 +2349,6 @@ dspec_falling_attack: {
 
 grab0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2578,7 +2361,6 @@ grab0: {
 
 check_walk: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2591,7 +2373,6 @@ check_walk: {
 
 fspec_core_enforcer_draw: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2604,7 +2385,6 @@ fspec_core_enforcer_draw: {
 
 move_y: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2617,7 +2397,6 @@ move_y: {
 
 Standard_Ledge_Snap: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2630,7 +2409,6 @@ Standard_Ledge_Snap: {
 
 check_aerial: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2643,7 +2421,6 @@ check_aerial: {
 
 utilt0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2656,7 +2433,6 @@ utilt0: {
 
 ripple_system_init: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2669,7 +2445,6 @@ ripple_system_init: {
 
 Player_Move_To_Front: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2682,7 +2457,6 @@ Player_Move_To_Front: {
 
 check_tech: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2695,7 +2469,6 @@ check_tech: {
 
 Standard_Wall_Jump: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2708,7 +2481,6 @@ Standard_Wall_Jump: {
 
 Input_Buffer_Save: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2721,7 +2493,6 @@ Input_Buffer_Save: {
 
 Melee_Collide: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
   ],
@@ -2734,7 +2505,6 @@ Melee_Collide: {
 
 Layer_Fade_End: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2747,7 +2517,6 @@ Layer_Fade_End: {
 
 zair0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2760,7 +2529,6 @@ zair0: {
 
 dspec_test: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2773,7 +2541,6 @@ dspec_test: {
 
 Targetbox_Collide: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
   ],
@@ -2786,7 +2553,6 @@ Targetbox_Collide: {
 
 uspec_rising_attack: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2799,7 +2565,6 @@ uspec_rising_attack: {
 
 on_ground: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[x]', '',
     '[y]', '',
@@ -2813,7 +2578,6 @@ on_ground: {
 
 cancel_charge_check: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2826,7 +2590,6 @@ cancel_charge_check: {
 
 create_magnetbox: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'relative_x', '',
     'relative_y', '',
@@ -2850,7 +2613,6 @@ create_magnetbox: {
 
 cancel_jump_check: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2863,7 +2625,6 @@ cancel_jump_check: {
 
 Custom_Controls_Unpack: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'profile_num', '',
   ],
@@ -2876,7 +2637,6 @@ Custom_Controls_Unpack: {
 
 MACROS: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2889,7 +2649,6 @@ MACROS: {
 
 confetti_burst: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'x', '',
     'y', '',
@@ -2907,7 +2666,6 @@ confetti_burst: {
 
 Register_Tech_Input: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'count', '',
   ],
@@ -2920,7 +2678,6 @@ Register_Tech_Input: {
 
 Standard_Wall_Cling: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2933,7 +2690,6 @@ Standard_Wall_Cling: {
 
 button_hold: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'input_index', '',
     '[buffer_amount]', '',
@@ -2947,7 +2703,6 @@ button_hold: {
 
 Standard_Rolling: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2960,7 +2715,6 @@ Standard_Rolling: {
 
 Magnetbox_Collide: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
   ],
@@ -2973,7 +2727,6 @@ Magnetbox_Collide: {
 
 Standard_Grab_Release: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -2986,7 +2739,6 @@ Standard_Grab_Release: {
 
 set_state: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'state', '',
   ],
@@ -2999,7 +2751,6 @@ set_state: {
 
 Standard_Helpless: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3012,7 +2763,6 @@ Standard_Helpless: {
 
 AI_Input: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'count', '',
   ],
@@ -3025,7 +2775,6 @@ AI_Input: {
 
 custom_projectile: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'object', '',
     'relative_x', '',
@@ -3051,7 +2800,6 @@ custom_projectile: {
 
 stick_get_direction: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stick', '',
     '[frame]', '',
@@ -3065,7 +2813,6 @@ stick_get_direction: {
 
 Standard_Entrance: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3078,7 +2825,6 @@ Standard_Entrance: {
 
 fair_zetterburn: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3091,7 +2837,6 @@ fair_zetterburn: {
 
 grab_marth: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3104,7 +2849,6 @@ grab_marth: {
 
 get_char_data: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'character', '',
     'data', '',
@@ -3118,7 +2862,6 @@ get_char_data: {
 
 move_x_grounded: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'edge_buffer', '',
   ],
@@ -3131,7 +2874,6 @@ move_x_grounded: {
 
 background_define: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'sprite', '',
     'xoff', '',
@@ -3152,7 +2894,6 @@ background_define: {
 
 nair0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3165,7 +2906,6 @@ nair0: {
 
 bair_forsburn: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3178,7 +2918,6 @@ bair_forsburn: {
 
 button: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'input_index', '',
     '[buffer_time]', '',
@@ -3193,7 +2932,6 @@ button: {
 
 usmash_sheik: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3206,7 +2944,6 @@ usmash_sheik: {
 
 dsmash_mewtwo: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3219,7 +2956,6 @@ dsmash_mewtwo: {
 
 check_ledge_grab: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3232,7 +2968,6 @@ check_ledge_grab: {
 
 nair_dedede: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3245,7 +2980,6 @@ nair_dedede: {
 
 Windbox_Collide: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
   ],
@@ -3258,7 +2992,6 @@ Windbox_Collide: {
 
 Custom_Controls_Reset: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'list', '',
   ],
@@ -3271,7 +3004,6 @@ Custom_Controls_Reset: {
 
 nair_toon_link: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3284,7 +3016,6 @@ nair_toon_link: {
 
 Profile_Clean_Auto: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3297,7 +3028,6 @@ Profile_Clean_Auto: {
 
 pummel0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3310,7 +3040,6 @@ pummel0: {
 
 uspec0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3323,7 +3052,6 @@ uspec0: {
 
 dashattack_claw: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3336,7 +3064,6 @@ dashattack_claw: {
 
 fsmash0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3349,7 +3076,6 @@ fsmash0: {
 
 stick_find_frame: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stick', '',
     'tilt', '',
@@ -3369,7 +3095,6 @@ stick_find_frame: {
 
 create_palette_rgb: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'color_rgb...', '',
   ],
@@ -3382,7 +3107,6 @@ create_palette_rgb: {
 
 check_blastzones: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'x1', '',
     'y1', '',
@@ -3398,7 +3122,6 @@ check_blastzones: {
 
 load_string_file_compressed: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'filename', '',
   ],
@@ -3411,7 +3134,6 @@ load_string_file_compressed: {
 
 easy_tween: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3424,7 +3146,6 @@ easy_tween: {
 
 reverse_b: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3437,7 +3158,6 @@ reverse_b: {
 
 draw_window: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'x', '',
     'y', '',
@@ -3459,7 +3179,6 @@ draw_window: {
 
 hurtbox_match_animation: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3472,7 +3191,6 @@ hurtbox_match_animation: {
 
 destroy_attached_hitboxes_in_group: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'group_number', '',
     'hitbox_list', '',
@@ -3486,7 +3204,6 @@ destroy_attached_hitboxes_in_group: {
 
 Update_Input_Buffer_Replay: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'buffer_index', '',
     'count', '',
@@ -3500,7 +3217,6 @@ Update_Input_Buffer_Replay: {
 
 Standard_Waveland: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3513,7 +3229,6 @@ Standard_Waveland: {
 
 array_clear: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'array', '',
     'value', '',
@@ -3527,7 +3242,6 @@ array_clear: {
 
 gamepad_axis_rounded: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'device', '',
     'axisIndex', '',
@@ -3541,7 +3255,6 @@ gamepad_axis_rounded: {
 
 fspec_pit: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3554,7 +3267,6 @@ fspec_pit: {
 
 uspec_extreme_speed: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3567,7 +3279,6 @@ uspec_extreme_speed: {
 
 Profile_Create: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'name', '',
     'wins', '',
@@ -3586,7 +3297,6 @@ Profile_Create: {
 
 Custom_Controls_Create: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3599,7 +3309,6 @@ Custom_Controls_Create: {
 
 check_airdodge: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3612,7 +3321,6 @@ check_airdodge: {
 
 projectile_move_x: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[bounce]', '',
     '[bounce_multiplier]', '',
@@ -3626,7 +3334,6 @@ projectile_move_x: {
 
 nspec_programmable: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3639,7 +3346,6 @@ nspec_programmable: {
 
 Player_Data_Create: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'character', '',
     'color', '',
@@ -3656,7 +3362,6 @@ Player_Data_Create: {
 
 Standard_Grabbing: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3669,7 +3374,6 @@ Standard_Grabbing: {
 
 allow_hitfall: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[unallow]', '',
   ],
@@ -3682,7 +3386,6 @@ allow_hitfall: {
 
 draw_text_sprite: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'x', '',
     'y', '',
@@ -3704,7 +3407,6 @@ draw_text_sprite: {
 
 ds_list_value_to_end: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
     'value', '',
@@ -3718,7 +3420,6 @@ ds_list_value_to_end: {
 
 fastfall_try: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3731,7 +3432,6 @@ fastfall_try: {
 
 Standard_Running: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3744,7 +3444,6 @@ Standard_Running: {
 
 Timestamp_Create: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3757,7 +3456,6 @@ Timestamp_Create: {
 
 match_end: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[room]', '',
   ],
@@ -3770,7 +3468,6 @@ match_end: {
 
 daynight_reset: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3783,7 +3480,6 @@ daynight_reset: {
 
 dashattack_leap: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3796,7 +3492,6 @@ dashattack_leap: {
 
 button_reset: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'input_index', '',
     '[value]', '',
@@ -3810,7 +3505,6 @@ button_reset: {
 
 Game_Init: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3823,7 +3517,6 @@ Game_Init: {
 
 ds_list_to_array: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'list', '',
   ],
@@ -3836,7 +3529,6 @@ ds_list_to_array: {
 
 projectile_move_y: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[bounce]', '',
     '[bounce_multiplier]', '',
@@ -3850,7 +3542,6 @@ projectile_move_y: {
 
 dsmash0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3863,7 +3554,6 @@ dsmash0: {
 
 Standard_Ledge_Jump: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3876,7 +3566,6 @@ Standard_Ledge_Jump: {
 
 check_wall_jump: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3889,7 +3578,6 @@ check_wall_jump: {
 
 Layer_Fade_Begin: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3902,7 +3590,6 @@ Layer_Fade_Begin: {
 
 dair_yoshi: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3915,7 +3602,6 @@ dair_yoshi: {
 
 calculate_hitlag: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'base_hitlag', '',
     'dmg', '',
@@ -3930,7 +3616,6 @@ calculate_hitlag: {
 
 fspec0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3943,7 +3628,6 @@ fspec0: {
 
 Profile_Load_All: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3956,7 +3640,6 @@ Profile_Load_All: {
 
 Get_Player_State_Name: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'PLAYER_STATE', '',
   ],
@@ -3969,7 +3652,6 @@ Get_Player_State_Name: {
 
 Standard_Parry_Stun: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3982,7 +3664,6 @@ Standard_Parry_Stun: {
 
 check_dash_grab: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -3995,7 +3676,6 @@ check_dash_grab: {
 
 character0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4008,7 +3688,6 @@ character0: {
 
 check_crouch: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4021,7 +3700,6 @@ check_crouch: {
 
 taunt_draw0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4034,7 +3712,6 @@ taunt_draw0: {
 
 daynight_set: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4047,7 +3724,6 @@ daynight_set: {
 
 cancel_air_check: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4060,7 +3736,6 @@ cancel_air_check: {
 
 move_attached_hitbox_group: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'group_number', '',
     'relative_x', '',
@@ -4076,7 +3751,6 @@ move_attached_hitbox_group: {
 
 Standard_Star_KO: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4089,7 +3763,6 @@ Standard_Star_KO: {
 
 move_y_hit_platforms: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4102,7 +3775,6 @@ move_y_hit_platforms: {
 
 Input_Buffer_Load: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4115,7 +3787,6 @@ Input_Buffer_Load: {
 
 Standard_Crouching: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4128,7 +3799,6 @@ Standard_Crouching: {
 
 stick_flicked: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stick', '',
     '[direction]', '',
@@ -4143,7 +3813,6 @@ stick_flicked: {
 
 Update_Input_Buffer: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'buffer_index', '',
     'keyboard', '',
@@ -4158,7 +3827,6 @@ Update_Input_Buffer: {
 
 draw_round_bar: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'x', '',
     'y', '',
@@ -4179,7 +3847,6 @@ draw_round_bar: {
 
 jab_rapid: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4192,7 +3859,6 @@ jab_rapid: {
 
 taunt0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4205,7 +3871,6 @@ taunt0: {
 
 Standard_Ledge_Getup: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4218,7 +3883,6 @@ Standard_Ledge_Getup: {
 
 is_alive: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'player_id', '',
   ],
@@ -4231,7 +3895,6 @@ is_alive: {
 
 Standard_Walking: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4244,7 +3907,6 @@ Standard_Walking: {
 
 uspec_zss: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4257,7 +3919,6 @@ uspec_zss: {
 
 attached_hitbox_group_has_hit: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'group', '',
     '[hitbox_list]', '',
@@ -4271,7 +3932,6 @@ attached_hitbox_group_has_hit: {
 
 check_throws: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4284,7 +3944,6 @@ check_throws: {
 
 character1: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4297,7 +3956,6 @@ character1: {
 
 Voronoi_Change_Color: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'r_range', '',
     'g_range', '',
@@ -4312,7 +3970,6 @@ Voronoi_Change_Color: {
 
 Update_Paused_Buffer: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'keyboard', '',
   ],
@@ -4325,7 +3982,6 @@ Update_Paused_Buffer: {
 
 destroy_all_attached_hitboxes: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[hitbox_list]', '',
   ],
@@ -4338,7 +3994,6 @@ destroy_all_attached_hitboxes: {
 
 nspec_falcon_punch: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4351,7 +4006,6 @@ nspec_falcon_punch: {
 
 fspec_afterburner_kick: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4364,7 +4018,6 @@ fspec_afterburner_kick: {
 
 Grab_Collide: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
   ],
@@ -4377,7 +4030,6 @@ Grab_Collide: {
 
 jab0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4390,7 +4042,6 @@ jab0: {
 
 check_smashes: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4403,7 +4054,6 @@ check_smashes: {
 
 move_x_bounce: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4416,7 +4066,6 @@ move_x_bounce: {
 
 check_parried: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4429,7 +4078,6 @@ check_parried: {
 
 draw_surface_safe: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'id', '',
     'x', '',
@@ -4444,7 +4092,6 @@ draw_surface_safe: {
 
 draw_text_outline_simple: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'x', '',
     'y', '',
@@ -4459,7 +4106,6 @@ draw_text_outline_simple: {
 
 grab_release: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4472,7 +4118,6 @@ grab_release: {
 
 uthrow_jump: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4485,7 +4130,6 @@ uthrow_jump: {
 
 bthrow0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4498,7 +4142,6 @@ bthrow0: {
 
 Standard_Hitlag: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4511,7 +4154,6 @@ Standard_Hitlag: {
 
 modulo: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'x', '',
     'm', '',
@@ -4525,7 +4167,6 @@ modulo: {
 
 check_wall_cling: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4538,7 +4179,6 @@ check_wall_cling: {
 
 Standard_Walk_Turnaround: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4551,7 +4191,6 @@ Standard_Walk_Turnaround: {
 
 Get_Input_Name: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'input', '',
   ],
@@ -4564,7 +4203,6 @@ Get_Input_Name: {
 
 nspec_charge_shot: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4577,7 +4215,6 @@ nspec_charge_shot: {
 
 check_dash: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4590,7 +4227,6 @@ check_dash: {
 
 Standard_Shielding: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4603,7 +4239,6 @@ Standard_Shielding: {
 
 Player_Init_End: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4616,7 +4251,6 @@ Player_Init_End: {
 
 Standard_Shield_Break: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4629,7 +4263,6 @@ Standard_Shield_Break: {
 
 check_shield: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4642,7 +4275,6 @@ check_shield: {
 
 stick_check: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stick', '',
     'tilt', '',
@@ -4662,7 +4294,6 @@ stick_check: {
 
 set_anim_reset: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4675,7 +4306,6 @@ set_anim_reset: {
 
 dair_shulk: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4688,7 +4318,6 @@ dair_shulk: {
 
 destroy_hitbox: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4701,7 +4330,6 @@ destroy_hitbox: {
 
 Profile_Set: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'profile_num', '',
     'setting', '',
@@ -4716,7 +4344,6 @@ Profile_Set: {
 
 css_calculate_design: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'characters', '',
     'max_row_length', '',
@@ -4730,7 +4357,6 @@ css_calculate_design: {
 
 get_position_in_view: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'x', '',
     'y', '',
@@ -4749,7 +4375,6 @@ get_position_in_view: {
 
 fthrow0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4762,7 +4387,6 @@ fthrow0: {
 
 stick_tilted: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stick', '',
     '[directions]', '',
@@ -4775,22 +4399,8 @@ stick_tilted: {
   }
 },
 
-move_grounded_: {
-  description: `<p></p>`,
-  syntax: '',
-  args: [
-    
-  ],
-  returns: '---',
-  example: {
-    code: ``,
-    description: `<p></p>`
-  }
-},
-
 Camera_Average: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4803,7 +4413,6 @@ Camera_Average: {
 
 stick_get_value: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stick', '',
     'direction', '',
@@ -4818,7 +4427,6 @@ stick_get_value: {
 
 Standard_Ledge_Roll: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4831,7 +4439,6 @@ Standard_Ledge_Roll: {
 
 camera_shake: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'h', '',
     '[v]', '',
@@ -4845,7 +4452,6 @@ camera_shake: {
 
 uair_ike: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4858,7 +4464,6 @@ uair_ike: {
 
 ripple_system_step: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4871,7 +4476,6 @@ ripple_system_step: {
 
 dtilt0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4884,7 +4488,6 @@ dtilt0: {
 
 cancel_airdodge_check: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4897,7 +4500,6 @@ cancel_airdodge_check: {
 
 Standard_Airdodge: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4910,7 +4512,6 @@ Standard_Airdodge: {
 
 double_jump: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4923,7 +4524,6 @@ double_jump: {
 
 reset_hitbox_groups: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[collided_list]', '',
   ],
@@ -4936,7 +4536,6 @@ reset_hitbox_groups: {
 
 load_string_file: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'filename', '',
   ],
@@ -4949,7 +4548,6 @@ load_string_file: {
 
 stick_get_speed: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'stick', '',
     '[frame]', '',
@@ -4963,7 +4561,6 @@ stick_get_speed: {
 
 Spawn_Players: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -4976,7 +4573,6 @@ Spawn_Players: {
 
 set_anim: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'sprite', '',
     '[frame]', '',
@@ -4995,7 +4591,6 @@ set_anim: {
 
 create_hurtbox: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[sprite]', '',
   ],
@@ -5008,7 +4603,6 @@ create_hurtbox: {
 
 check_waveland: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -5021,7 +4615,6 @@ check_waveland: {
 
 nspec_programmable_draw: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -5034,7 +4627,6 @@ nspec_programmable_draw: {
 
 parry0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -5047,7 +4639,6 @@ parry0: {
 
 calculate_grab_time: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'target_hp', '',
   ],
@@ -5060,7 +4651,6 @@ calculate_grab_time: {
 
 dthrow0: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -5073,7 +4663,6 @@ dthrow0: {
 
 attack_stop_ext: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[state]', '',
     '[reset_hitboxes]', '',
@@ -5088,7 +4677,6 @@ attack_stop_ext: {
 
 hitfall_try: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -5101,7 +4689,6 @@ hitfall_try: {
 
 hurtbox_reset: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -5114,7 +4701,6 @@ hurtbox_reset: {
 
 on_solid: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     '[x]', '',
     '[y]', '',
@@ -5128,7 +4714,6 @@ on_solid: {
 
 Profile_Draw: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'num', '',
     'x', '',
@@ -5145,7 +4730,6 @@ Profile_Draw: {
 
 get_player_data: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     'player', '',
     'data', '',
@@ -5159,7 +4743,6 @@ get_player_data: {
 
 check_dash_attack: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -5172,7 +4755,6 @@ check_dash_attack: {
 
 bair_fox: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -5185,7 +4767,6 @@ bair_fox: {
 
 fsmash_ganon: {
   description: `<p></p>`,
-  syntax: '',
   args: [
     
   ],
@@ -5195,6 +4776,165 @@ fsmash_ganon: {
     description: `<p></p>`
   }
 },
+
+move: {
+  description: `<p></p>`,
+  args: [
+    
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+is_stamina_match: {
+  description: `<p></p>`,
+  args: [
+    
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+move_grounded: {
+  description: `<p></p>`,
+  args: [
+    
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+is_time_match: {
+  description: `<p></p>`,
+  args: [
+    
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+move_bouncing: {
+  description: `<p></p>`,
+  args: [
+    
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+is_stock_match: {
+  description: `<p></p>`,
+  args: [
+    
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+apply_damage: {
+  description: `<p></p>`,
+  args: [
+    'player_id', '',
+    'damage', '',
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+dspec_bouncing_fish: {
+  description: `<p></p>`,
+  args: [
+    
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+CSS_Player_Create: {
+  description: `<p></p>`,
+  args: [
+    'device', '',
+    'color', '',
+    'profile', '',
+    'selected_character', '',
+    'cursor', '',
+    'token', '',
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+fx_create_colored: {
+  description: `<p></p>`,
+  args: [
+    'sprite', '',
+    'image_speed', '',
+    'index', '',
+    'lifespan', '',
+    'x', '',
+    'y', '',
+    'scale', '',
+    'angle', '',
+    '[layer]', '',
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+is_dead: {
+  description: `<p></p>`,
+  args: [
+    '[player]', '',
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
+move_hit_platforms: {
+  description: `<p></p>`,
+  args: [
+    
+  ],
+  returns: '---',
+  example: {
+    code: ``,
+    description: `<p></p>`
+  }
+},
+
 
 // end functions
 
